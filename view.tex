@@ -1,0 +1,22 @@
+[vasanth@localhost ansible]$ ansible-playbook tomcat.yaml --ask-become-pass
+[vasanth@localhost ansible]$ scp vasanth@192.168.0.102:/opt/apache-tomcat-9.0.107/conf/server.xml .
+[vasanth@localhost ansible]$ sudo scp vasanth@192.168.0.102:/opt/apache-tomcat-9.0.107/conf/server.xml .
+[vasanth@localhost ansible]$ mv server.xm server.xml.j2
+
+[vasanth@localhost ansible]$ sudo wget https://tomcat.apache.org/tomcat-6.0-doc/appdev/sample/sample.war
+[sudo] password for vasanth:
+
+[vasanth@localhost ansible]$ sudo vi tomcat.yaml
+[vasanth@localhost ansible]$ ansible-playbook tomcat.yaml --ask-become-pass
+[vasanth@localhost ansible]$ ansible-playbook tomcat.yaml --ask-become-pass
+[vasanth@localhost ansible]$ ansible-playbook tomcat.yaml -e "tomcat_port=9000" --ask-become-pass
+
+[vasanth@localhost ansible]$ ansible all -m shell -a "systemctl is-active sshd" --become
+[vasanth@localhost ansible]$ ansible all -m shell -a "systemctl is-active sshd" --ask-become-pass
+[vasanth@localhost ansible]$ ansible all -m shell -a "top -b -n 1 | head -20" --ask-become-pass
+[vasanth@localhost ansible]$ ansible all -m shell -a "top  | head -20" --ask-become-pass
+
+[vasanth@localhost ansible]$ ansible all -m shell -a "ls -ltr /opt/apache-tomcat-9.0.107"
+[vasanth@localhost ansible]$ ansible all -m shell -a "top -b -n 1 | head -20" --ask-become-pass
+[vasanth@localhost ansible]$ ansible all -m shell -a "top -b -n 1 | head -20" --ask-become-pass
+
