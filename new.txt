@@ -1,0 +1,39 @@
+   27  ansible all -m ping
+   28  cd
+   29  ls -ltr
+   30  pwd
+   31  vi index.html
+   32  cd /etc/ansible
+   33  ls -ltr
+   34  vi httpd.yaml
+   35  sudo vi httpd.yaml
+   36  ansible-playbook httpd.yaml
+   37  ansible all -m ping
+   38  ansible-inventory --list | grep webservers -A 5
+   39  ansible-hosts --list | grep webservers -A 5
+   40  sudo vi hosts
+   41  ansible webservers -m ping
+   42  ansible-playbook httpd.yaml
+   43  ansible-playbook httpd.yaml --ask-become-pass
+   51  ansible-playbook httpd.yaml --ask-become-pass
+   55  ansible-playbook loop.yaml --ask-become-pass
+   57  ansible-playbook SQL-Server-rep.yaml --ask-become-pass
+   59  ansible-playbook loop.yaml --ask-become-pass
+   66  ansible-playbook loop.yaml --ask-become-pass
+   69  ansible-playbook loop.yaml --ask-become-pass
+   74  ansible-playbook loop.yaml --ask-become-pass
+   76  ansible-playbook loop.yaml --ask-become-pass
+   77  sudo vi loop_uninstall.yaml
+   78  ansible-playbook loop_uninstall.yaml --ask-become-pass
+   79  sudo vi loop_uninstall.yaml
+   80  ansible-playbook loop_uninstall.yaml --ask-become-pass
+   85  ansible webservers -m ping
+   99  ansible webservers -m ping
+  106   ansible-playbook loop.yaml --ask-become-pass
+  107  ansible all -m ping
+  109  nmcli con mod eth0 ipv4.dns "8.8.8.8 1.1.1.1"
+  110  nmcli con up eth0
+  112  nmcli device status
+  113  nmcli con show
+  115  yum install openssh-server
+  120   ansible-playbook loop.yaml --ask-become-pass
