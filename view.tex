@@ -19,9 +19,10 @@
 [vasanth@localhost ansible]$ ansible all -m shell -a "ls -ltr /opt/apache-tomcat-9.0.107"
 [vasanth@localhost ansible]$ ansible all -m shell -a "top -b -n 1 | head -20" --ask-become-pass
 
-HELLOV VASANTH
+
  nmcli con mod eth0 ipv4.addresses 172.23.82.152/24
    13  nmcli con mod eth0 ipv4.gateway 172.23.82.1
    14  nmcli con mod eth0 ipv4.dns "8.8.8.8 1.1.1.1"
    15  nmcli con mod eth0 ipv4.method manual
    16  nmcli con down eth0 && sudo nmcli con up eth0
+
